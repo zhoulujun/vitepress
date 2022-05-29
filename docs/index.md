@@ -8,6 +8,9 @@ hero:
   name: VitePress
   text: Vite & Vue Powered Static Site Generator
   tagline: Simple, minimal, yet strikingly powerful. Meet the modern SSG framework you've always wanted.
+  image:
+    src: /logo-with-shadow.png
+    alt: VitePress
   actions:
     - theme: brand
       text: Get Started

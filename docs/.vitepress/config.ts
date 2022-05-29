@@ -6,6 +6,8 @@ export default defineConfig({
   description: 'Vite & Vue powered static site generator.',
 
   themeConfig: {
+    logo: '/logo.svg',
+
     nav: nav(),
 
     sidebar: {
