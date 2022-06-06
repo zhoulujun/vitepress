@@ -17,6 +17,7 @@ export { default as VPHomeHero } from './components/VPHomeHero.vue'
 export { default as VPHomeFeatures } from './components/VPHomeFeatures.vue'
 export { default as VPHomeSponsors } from './components/VPHomeSponsors.vue'
 export { default as VPDocAsideSponsors } from './components/VPDocAsideSponsors.vue'
+export { default as VPPageTeam } from './components/VPPageTeam.vue'
 
 const theme: Theme = {
   Layout,
