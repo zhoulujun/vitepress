@@ -140,9 +140,9 @@ export async function createVitePressPlugin(
           id,
           config.publicDir
         )
-        if (deadLinks.length) {
-          hasDeadLinks = true
-        }
+        // if (deadLinks.length) {
+        //   hasDeadLinks = true
+        // }
         if (includes.length) {
           includes.forEach((i) => {
             this.addWatchFile(i)

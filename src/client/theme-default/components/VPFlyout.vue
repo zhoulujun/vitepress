@@ -58,7 +58,9 @@ function onBlur() {
 .VPFlyout {
   position: relative;
 }
-
+.VPNavBarMenu .active .text {
+  color: var(--vp-c-brand);
+}
 .VPFlyout:hover {
   color: var(--vp-c-bland);
   transition: color 0.25s;

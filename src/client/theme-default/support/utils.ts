@@ -58,7 +58,7 @@ export function isActive(
     return hashRef.value === hashMatch[0]
   }
 
-  return true
+  return false
 }
 
 export function ensureStartingSlash(path: string): string {
