@@ -10,7 +10,8 @@ declare module '*.vue' {
 }
 
 declare module '@siteData' {
-  const data: string
+  import type { SiteData } from './shared'
+  const data: SiteData
   export default data
 }
 
@@ -18,13 +19,4 @@ declare module '@siteData' {
 declare module '@docsearch/js' {
   function docsearch<T = any>(props: T): void
   export default docsearch
-}
-
-declare module '@docsearch/react/dist/esm/types' {
-  export type DocSearchHit = any
-}
-
-declare module '@docsearch/css' {
-  const css: string
-  export default css
 }
