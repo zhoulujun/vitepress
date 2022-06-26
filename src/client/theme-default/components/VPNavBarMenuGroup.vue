@@ -1,24 +1,27 @@
 <script lang="ts" setup>
-import type { DefaultTheme } from 'vitepress/theme'
-import VPFlyout from './VPFlyout.vue'
 import { useData } from 'vitepress'
+import type { DefaultTheme } from 'vitepress/theme'
 import { isActive } from '../support/utils'
+import VPFlyout from './VPFlyout.vue'
+
 defineProps<{
   item: DefaultTheme.NavItemWithChildren
 }>()
+
 const { page } = useData()
 </script>
 
 <template>
   <VPFlyout
-      :button="item.text"
-      :items="item.items"
       :class="{
+      VPNavBarMenuGroup: true,
       active: isActive(
         page.relativePath,
-        item.activeMatch || item.link,
+        item.activeMatch,
         !!item.activeMatch
       )
     }"
+      :button="item.text"
+      :items="item.items"
   />
 </template>

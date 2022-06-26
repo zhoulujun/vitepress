@@ -94,6 +94,12 @@ export namespace DefaultTheme {
   export interface NavItemWithChildren {
     text?: string
     items: (NavItemChildren | NavItemWithLink)[]
+
+    /**
+     * `activeMatch` is expected to be a regex string. We can't use actual
+     * RegExp object here because it isn't serializable
+     */
+    activeMatch?: string
   }
 
   // image -----------------------------------------------------------------------
@@ -175,6 +181,19 @@ export namespace DefaultTheme {
     copyright?: string
   }
 
+  // team ----------------------------------------------------------------------
+
+  export interface TeamMember {
+    avatar: string
+    name: string
+    title?: string
+    org?: string
+    orgLink?: string
+    desc?: string
+    links?: SocialLink[]
+    sponsor?: string
+  }
+
   // locales -------------------------------------------------------------------
 
   export interface LocaleLinks {
@@ -201,6 +220,7 @@ export namespace DefaultTheme {
     searchParameters?: any
     disableUserPersonalization?: boolean
     initialQuery?: string
+    buttonText?: string
   }
 
   // carbon ads ----------------------------------------------------------------
