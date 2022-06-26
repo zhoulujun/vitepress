@@ -35,10 +35,10 @@ export default defineConfig({
       indexName: 'vitepress'
     },
 
-    carbonAds: {
-      code: 'CEBDT27Y',
-      placement: 'vuejsorg'
-    }
+    // carbonAds: {
+    //   code: 'CEBDT27Y',
+    //   placement: 'vuejsorg'
+    // }
   }
 })
 

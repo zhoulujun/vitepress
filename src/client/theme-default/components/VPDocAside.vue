@@ -1,9 +1,13 @@
 <script setup lang="ts">
 import { useData } from 'vitepress'
+import { onMounted } from 'vue'
 import VPDocAsideOutline from './VPDocAsideOutline.vue'
 import VPDocAsideCarbonAds from './VPDocAsideCarbonAds.vue'
-
+import { initGoogleAds } from '../../app/utils'
 const { page, theme } = useData()
+onMounted(()=>{
+  initGoogleAds()
+})
 </script>
 
 <template>
@@ -18,6 +22,12 @@ const { page, theme } = useData()
 
     <slot name="aside-ads-before" />
     <VPDocAsideCarbonAds v-if="theme.carbonAds" />
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-4116764389732804"
+         data-ad-slot="6305710821"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
     <slot name="aside-ads-after" />
 
     <slot name="aside-bottom" />

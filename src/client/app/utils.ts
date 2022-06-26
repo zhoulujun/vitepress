@@ -48,3 +48,16 @@ export function pathToFile(path: string): string {
 
   return pagePath
 }
+export function initGoogleAds() {
+  let timer: any = setTimeout(() => {
+    // @ts-ignore
+    if (!window.adsbygoogle as any) {
+      // @ts-ignore
+      window.adsbygoogle = []
+    }
+    // @ts-ignore
+    window.adsbygoogle.push({})
+  })
+  clearTimeout(timer)
+  timer = null
+}

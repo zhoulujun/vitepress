@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed } from 'vue'
+import { computed, onMounted } from 'vue'
 import { useData } from 'vitepress'
 import { normalizeLink } from '../support/utils'
 import { useEditLink } from '../composables/edit-link'
@@ -7,6 +7,7 @@ import { usePrevNext } from '../composables/prev-next'
 import VPIconEdit from './icons/VPIconEdit.vue'
 import VPLink from './VPLink.vue'
 import VPDocFooterLastUpdated from './VPDocFooterLastUpdated.vue'
+import { initGoogleAds } from '../../app/utils'
 
 const { theme, page, frontmatter } = useData()
 
@@ -16,6 +17,9 @@ const control = usePrevNext()
 const hasLastUpdated = computed(() => {
   return page.value.lastUpdated && frontmatter.value.lastUpdated !== false
 })
+onMounted(() => {
+  initGoogleAds()
+})
 </script>
 
 <template>
@@ -23,16 +27,15 @@ const hasLastUpdated = computed(() => {
     <div class="edit-info">
       <div v-if="theme.editLink && frontmatter.editLink !== false" class="edit-link">
         <VPLink class="edit-link-button" :href="editLink.url" :no-icon="true">
-          <VPIconEdit class="edit-link-icon" />
+          <VPIconEdit class="edit-link-icon"/>
           {{ editLink.text }}
         </VPLink>
       </div>
 
       <div v-if="hasLastUpdated" class="last-updated">
-        <VPDocFooterLastUpdated />
+        <VPDocFooterLastUpdated/>
       </div>
     </div>
-
     <div class="prev-next">
       <div class="pager">
         <a v-if="control.prev" class="pager-link prev" :href="normalizeLink(control.prev.link)">
@@ -46,6 +49,15 @@ const hasLastUpdated = computed(() => {
           <span class="title">{{ control.next.text }}</span>
         </a>
       </div>
+
+    </div>
+    <div class='edit-info'>
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-4116764389732804"
+           data-ad-slot="6305710821"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
     </div>
   </footer>
 </template>
