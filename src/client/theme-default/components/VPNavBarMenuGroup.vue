@@ -13,7 +13,7 @@ const { page } = useData()
 
 <template>
   <VPFlyout
-      :class="{
+    :class="{
       VPNavBarMenuGroup: true,
       active: isActive(
         page.relativePath,
@@ -21,7 +21,7 @@ const { page } = useData()
         !!item.activeMatch
       )
     }"
-      :button="item.text"
-      :items="item.items"
+    :button="item.text"
+    :items="item.items"
   />
 </template>
