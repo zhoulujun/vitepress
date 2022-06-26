@@ -43,6 +43,7 @@ onMounted(()=>{
 
 .spacer {
   flex-grow: 1;
+  min-height: 50px;
 }
 
 .VPDocAside :deep(.spacer + .VPDocAsideSponsors),

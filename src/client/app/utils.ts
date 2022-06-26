@@ -57,7 +57,7 @@ export function initGoogleAds() {
     }
     // @ts-ignore
     window.adsbygoogle.push({})
+    clearTimeout(timer)
+    timer = null
   })
-  clearTimeout(timer)
-  timer = null
 }
