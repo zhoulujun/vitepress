@@ -1,7 +1,7 @@
 {
   "name": "vitepress-zhoulujun",
-  "version": "1.1.7",
-  "description": "Vite & Vue powered static site generator",
+  "version": "1.1.8",
+  "description": "Vite & Vue powered static site generator。等不及官方修复，个人适配版本。比如死链无法打包、导航无法适配、页尾加备案链接无法直接配超链等等。",
   "type": "module",
   "packageManager": "pnpm@7.8.0",
   "main": "dist/node/index.js",

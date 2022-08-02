@@ -1,3 +1,8 @@
+# [zhoulujun.co](https://www.zhoulujun.co/) 个人博客适配版本。
+最新更改在个版本的原因在于 最初的版本的无法使用，比如死链无法打包、导航无法适配、页尾加备案链接无法直接配超链等等。
+
+所以自己私有化了一个版本。
+
 # VitePress (alpha) 📝💨
 
 [![Test](https://github.com/vuejs/vitepress/workflows/Test/badge.svg)](https://github.com/vuejs/vitepress/actions)
